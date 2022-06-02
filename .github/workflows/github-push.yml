@@ -47,5 +47,11 @@ jobs:
       - name: Pull upstream
         run: git fetch --unshallow
         
+      - name: Specify Identity in case of rebasing
+        run: git config --global user.email "organisation-name@github.com" && git config --global user.name "GitHub Action Runner"
+      
+      - name: Fix merge conflicts if any
+        run: git pull --rebase upstream main
+        
       - name: Git push to other repo
         run: git push upstream
