@@ -1,4 +1,4 @@
-# GitHub Action to push to another repository
+# GitHub Action to push to TUM Bitbucket
 
 Basic GitHub action to automatically push the current repository to another repository.
 
