@@ -44,7 +44,7 @@ jobs:
       - name: Add bitbucket to known SSH-HOST
         run: echo ${{env.BITBUCKET_PUB_KEY}} >> ~/.ssh/known_hosts
         
-      - name: Pull upstream
+      - name: Pull origin
         run: git fetch --unshallow
         
       - name: Specify Identity in case of rebasing
